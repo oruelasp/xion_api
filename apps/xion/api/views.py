@@ -14,7 +14,7 @@ class ValidarSerialAPIView(RetrieveAPIView):
     http_method_names = [u'get', u'options']
 
     def get_object(self):
-        db = os.environ.get('ODOO_DB', 'db_proyectos2')
+        db = os.environ.get('ODOO_DB', 'db_xion')
         username = os.environ.get('ODOO_USER', 'admin')
         password = os.environ.get('ODOO_PASSWORD', 'admin')
         url = os.environ.get('ODOO_URL', 'http://soyxion.com:8069')
@@ -50,7 +50,7 @@ class SessionCreateAPIView(CreateAPIView):
     serializer_class = SessionSerializer
 
     def perform_create(self, serializer):
-        db = os.environ.get('ODOO_DB', 'db_proyectos2')
+        db = os.environ.get('ODOO_DB', 'db_xion')
         username = os.environ.get('ODOO_USER', 'admin')
         password = os.environ.get('ODOO_PASSWORD', 'admin')
         url = os.environ.get('ODOO_URL', 'http://soyxion.com:8069')
